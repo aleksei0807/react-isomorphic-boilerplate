@@ -1,1 +1,1 @@
-# React Frontend Boilerplate
+# React Isomorphic Boilerplate

@@ -1,7 +1,7 @@
 {
-  "name": "react-frontend-boilerplate",
+  "name": "react-isomorphic-boilerplate",
   "version": "0.0.1",
-  "description": "React frontend boilerplate",
+  "description": "React isomorphic boilerplate",
   "main": "index.html",
   "scripts": {
     "build": "NODE_ENV='production' webpack",
@@ -14,8 +14,9 @@
   },
   "keywords": [
 	"react",
-	"frontend",
-	"boilerplate"
+	"isomorphic",
+	"boilerplate",
+	"universal"
   ],
   "author": "Aleksei Schurak",
   "license": "MIT",
