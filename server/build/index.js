@@ -24,17 +24,6 @@ var _routes2 = _interopRequireDefault(_routes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// const http = require('http');
-// const fs = require('fs');
-// let port = process.env.PORT || 3333;
-//
-// http.createServer((req, res) => {
-// 	let index = fs.readFileSync("index.html", {encoding: "utf-8"});
-// 	console.log(index);
-// 	res.setHeader("Content-Type", "text/html;charset=utf-8");
-// 	res.end(index);
-// }).listen(port);
-
 var app = (0, _express2.default)();
 
 app.use('/static', _express2.default.static('client/dist'));
@@ -42,8 +31,6 @@ app.use('/static', _express2.default.static('client/dist'));
 app.use((0, _cookieParser2.default)());
 
 app.use(function (req, res) {
-	// let assets = require('../public/assets/assets.json');
-	// delete require.cache[ '/opt/nullCRM/public/assets/assets.json' ];
 	(0, _reactRouter.match)({ routes: _routes2.default, location: req.url }, function (error, redirectLocation, renderProps) {
 		var componentHTML = _server2.default.renderToString(_react2.default.createElement(_reactRouter.RouterContext, renderProps));
 		res.end(renderHTML({ componentHTML: componentHTML }));
